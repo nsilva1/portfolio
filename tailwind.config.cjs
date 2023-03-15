@@ -3,6 +3,9 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        dimWhite: 'rgba(255, 255, 255, 0.7)',
+      },
       fontFamily: {
         poppins: ['Poppins'],
         signature: ['Great Vibes'],

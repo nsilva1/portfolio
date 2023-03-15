@@ -24,7 +24,7 @@ const Hero = () => {
           Full Stack <br className='sm:block hidden' />{' '}
           <span className='text-gradient'>Developer</span>{' '}
         </h1>
-        <p className={`${styles.paragraph} text-white mb-5`}>
+        <p className={`${styles.paragraph} mb-5`}>
           Self-taught full-stack developer with 5+ years of experience designing
           and building web applications. Proficient with HTML, CSS, React, and
           Python, with experience in DevOps.
