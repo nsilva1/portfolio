@@ -2,7 +2,7 @@ import styles from '../styles';
 
 const About = () => {
   return (
-    <div>
+    <div id='about'>
       <div className={`${styles.flexStart} flex-col w-full`}>
         <div className='py-6 '>
           <h1 className='font-poppins font-semibold ss:text-[60px] text-[45px] ss:leading-[100px] leading-[75px] text-gradient'>

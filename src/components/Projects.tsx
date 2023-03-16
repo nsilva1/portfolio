@@ -4,7 +4,10 @@ import styles from '../styles';
 
 const Projects = () => {
   return (
-    <section className={`${styles.flexCenter} flex-col w-full h-full p-4`}>
+    <section
+      id='projects'
+      className={`${styles.flexCenter} flex-col w-full h-full p-4`}
+    >
       <div className='py-6'>
         <h2 className='font-poppins font-semibold ss:text-[60px] text-[40px] ss:leading-[80px] leading-[65px] text-gradient'>
           Projects

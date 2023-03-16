@@ -37,7 +37,7 @@ const Contact = () => {
       const response = await axios.post(url, localState, {
         headers: { Accept: 'application/json' },
       });
-      console.log(response)
+      console.log(response);
       setLocalState({
         name: '',
         email: '',
@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section>
+    <section id='contact'>
       <div>
         <div className='text-center py-6'>
           <h2 className={styles.heading2}>Contact</h2>

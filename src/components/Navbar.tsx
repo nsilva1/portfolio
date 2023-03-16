@@ -2,6 +2,7 @@ import { useState } from 'react';
 import close from '../assets/close.svg';
 import menu from '../assets/menu.svg';
 import { navLinks } from '../constants';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -20,13 +21,15 @@ const Navbar = () => {
               index === navLinks.length - 1 ? 'mr-0' : 'mr-10'
             } text-white`}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            <Link to={nav.id} smooth duration={400}>
+              {nav.title}
+            </Link>
           </li>
         ))}
       </ul>
 
       {/* mobile view */}
-      <div className='sm:hidden flex flex-1 justify-end items-center'>
+      <div className='sm:hidden flex flex-1 justify-end items-center z-10'>
         <img
           src={toggle ? close : menu}
           alt='nav menu'
@@ -47,7 +50,9 @@ const Navbar = () => {
                   index === navLinks.length - 1 ? 'mr-0' : 'mb-5'
                 } text-white`}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <Link to={nav.id} smooth duration={400}>
+                  {nav.title}
+                </Link>
               </li>
             ))}
           </ul>

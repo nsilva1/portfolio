@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Button = ({ text }: { text: String }) => {
   return (
     <div>
