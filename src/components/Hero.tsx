@@ -2,6 +2,7 @@ import React from 'react';
 import profileImage from '../assets/profile_image.jpg';
 import styles from '../styles';
 import Button from './Button';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
@@ -29,7 +30,9 @@ const Hero = () => {
           and building web applications. Proficient with HTML, CSS, React, and
           Python, with experience in DevOps.
         </p>
-        <Button text='Projects' />
+        <Link to='projects' smooth duration={200}>
+          <Button text='Projects' />
+        </Link>
       </div>
     </section>
   );
