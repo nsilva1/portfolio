@@ -34,10 +34,10 @@ const Contact = () => {
     const url = 'https://getform.io/f/f7c90408-ab8b-4154-aee2-5ef6adeb0edb';
 
     try {
-      const response = await axios.post(url, localState, {
+      await axios.post(url, localState, {
         headers: { Accept: 'application/json' },
       });
-      console.log(response);
+      alert('Message sent successfully');
       setLocalState({
         name: '',
         email: '',
