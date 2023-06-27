@@ -15,7 +15,7 @@ const Projects = () => {
       </div>
       <div className='flex flex-1 flex-row flex-wrap justify-center xl:justify-start'>
         {projectLinks.map((project) => (
-          <div key={project.id} className='feedback-card w-72  shadow-xl m-3'>
+          <div key={project.id} className='feedback-card w-96 shadow-xl m-3'>
             <figure>
               <img
                 src={project.icon}
