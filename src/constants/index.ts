@@ -34,14 +34,20 @@ export const projectLinks = [
     icon: gata,
     codeLink: 'https://github.com/nsilva1/gata-quiz',
     demoLink: 'https://gata-quiz.vercel.app/',
-    name: 'Gata Quiz'
+    name: 'Gata Quiz',
+    description: 'A Web 3 quiz game with oncline classes in the metaverse',
+    frontend: 'Frontend - React, Tailwind',
+    backend: 'Backend - Firebase Firestore, Vercel Hosting'
   },
   {
     id: 2,
     icon: webChatApp,
     codeLink: 'https://github.com/nsilva1/web-chat-app',
     demoLink: 'https://web-chat-app-pearl.vercel.app/',
-    name: 'Web Chat App'
+    name: 'Web Chat App',
+    description: 'A chat application with Google authentication',
+    frontend: 'Frontend - React, Tailwind',
+    backend: 'Backend - Firebase Authentication & Firestore, Vercel Hosting'
   },
   
   {
@@ -49,20 +55,29 @@ export const projectLinks = [
     icon: modern,
     codeLink: 'https://github.com/nsilva1/tailwind-website',
     demoLink: 'https://tailwind-website-theta.vercel.app/',
-    name: 'Modern Tailwind Website'
+    name: 'Modern Tailwind Website',
+    description: 'A modern payment solution website',
+    frontend: 'Frontend - React, Tailwind',
+    backend: 'Backend - Vercel Hosting'
   },
   {
     id: 4,
     icon: calculator,
     codeLink: 'https://github.com/nsilva1/simple-calculator',
     demoLink: 'https://simple-calculator-nsilva1.vercel.app/',
-    name: 'Simple Calculator'
+    name: 'Simple Calculator',
+    description: 'A simple calculator using React Context API',
+    frontend: 'Frontend - React, Tailwind',
+    backend: 'Backend - Vercel Hosting'
   },
   {
     id: 5,
     icon: imageGallery,
     codeLink: 'https://github.com/nsilva1/image-gallery',
     demoLink: 'https://dazzling-panda-006119.netlify.app/',
-    name: 'Image Gallery'
+    name: 'Image Gallery',
+    description: 'An image search gallery where images are gotten from pixabay using axios to make api calls',
+    frontend: 'Frontend - React, Tailwind, Axios',
+    backend: 'Backend - Netlify Hosting'
   },
 ]

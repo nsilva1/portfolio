@@ -24,9 +24,13 @@ const Projects = () => {
               />
             </figure>
             <div className='card-body'>
-              <div className='card-actions justify-between'>
+              <h2 className='card-title text-white'>{project.name}</h2>
+              <p className='text-white'>{project.description}</p>
+              <p className='text-white'>{project.frontend}</p>
+              <p className='text-white'>{project.backend}</p>
+              <div className='card-actions justify-between mt-5'>
                 <a
-                  className='text-white hover:text-dimWhite'
+                  className='btn btn-ghost text-white hover:text-dimWhite'
                   href={project.demoLink}
                   target='_blank'
                   rel='noreferrer'
@@ -34,7 +38,7 @@ const Projects = () => {
                   View Demo
                 </a>
                 <a
-                  className='text-white hover:text-dimWhite'
+                  className='btn btn-ghost text-white hover:text-dimWhite'
                   href={project.codeLink}
                   target='_blank'
                   rel='noreferrer'

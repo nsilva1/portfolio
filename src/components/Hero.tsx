@@ -22,11 +22,11 @@ const Hero = () => {
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
       >
         <h1 className='flex-1 font-poppins font-semibold ss:text-[69px] text-[50px] text-white ss:leading-[100px] leading-[75px]'>
-          Full Stack <br className='sm:block hidden' />{' '}
-          <span className='text-gradient'>Developer</span>{' '}
+          Software <br className='sm:block hidden' />{' '}
+          <span className='text-gradient'>Engineer</span>{' '}
         </h1>
         <p className={`${styles.paragraph} mb-5`}>
-          Self-taught full-stack developer with 5+ years of experience designing
+          Self-taught software engineer with over 5 years of experience designing
           and building web applications. Proficient with HTML, CSS, React, and
           Python, with experience in DevOps.
         </p>
