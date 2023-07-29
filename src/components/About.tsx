@@ -11,11 +11,13 @@ const About = () => {
         </div>
         <div>
           <p className={`${styles.paragraph} py-1`}>
-            I am a highly skilled full stack developer with over 5 years of
-            experience in building complex web applications using React and
-            Python. I am skilled in developing scalable and reliable software
-            solutions using cloud environments such as AWS, Digital Ocean and
-            Netlify.
+            I am an experienced Software Engineer with over 5 years of
+            experience in React, TypeScript, FastAPI, MongoDB, and PostgreSQL. I
+            specialize in building visually appealing user interfaces using
+            React and TypeScript, while leveraging FastAPI for efficient
+            server-side development. With deep knowledge of MongoDB and
+            PostgreSQL, I excel in designing and optimizing database schemas for
+            superior performance.
           </p>
           <p className={`${styles.paragraph} py-1`}>
             With a strong foundation in both front-end and back-end

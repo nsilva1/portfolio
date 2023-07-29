@@ -27,7 +27,7 @@ const Hero = () => {
         </h1>
         <p className={`${styles.paragraph} mb-5`}>
           Self-taught software engineer with over 5 years of experience designing
-          and building web applications. Proficient with HTML, CSS, React, and
+          and building web applications. Highly skilled in React, and
           Python, with experience in DevOps.
         </p>
         <Link to='projects' smooth duration={200}>

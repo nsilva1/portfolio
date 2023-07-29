@@ -4,9 +4,9 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const SocialLinks = () => {
   return (
-    <div className='hidden sm:flex flex-col top-[35%] left-0 fixed'>
+    <div className='sm:flex flex-col top-[35%] left-0 fixed z-10'>
       <ul>
-        <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] rounded hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500'>
+        <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] rounded hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500 mb-1'>
           <a
             href='https://github.com/nsilva1'
             target='_blank'
@@ -18,7 +18,7 @@ const SocialLinks = () => {
             </>
           </a>
         </li>
-        <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] rounded hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500'>
+        <li className='flex justify-between items-center w-40 h-14 px-4 ml-[-100px] rounded hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500 mb-1'>
           <a
             href='mailto:netoukpong@gmail.com'
             target='_blank'

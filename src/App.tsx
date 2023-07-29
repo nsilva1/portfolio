@@ -2,7 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import styles from './styles';
 import About from './components/About';
-// import Skills from './components/Skills';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 // import Footer from './components/Footer';
@@ -29,7 +29,7 @@ function App() {
       <div className={`${styles.paddingX} ${styles.flexStart}`}>
         <div className={styles.boxWidth}>
           <About />
-          {/* <Skills /> */}
+          <Skills />
           <Projects />
           <Contact />
           {/* <Footer /> */}

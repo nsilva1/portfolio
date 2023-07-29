@@ -13,19 +13,19 @@ const Projects = () => {
           Projects
         </h2>
       </div>
-      <div className='flex flex-1 flex-row flex-wrap justify-center xl:justify-start'>
+      <div className='flex flex-1 flex-row flex-wrap justify-center xl:justify-start px-5'>
         {projectLinks.map((project) => (
-          <div key={project.id} className='feedback-card w-96 shadow-xl m-3'>
+          <div key={project.id} className='feedback-card w-[500px] shadow-2xl rounded-3xl m-5'>
             <figure>
               <img
                 src={project.icon}
                 alt={project.name}
-                className='rounded duration-200 hover:scale-105'
+                className='rounded w-[500px] h-72'
               />
             </figure>
             <div className='card-body'>
               <h2 className='card-title text-white'>{project.name}</h2>
-              <p className='text-white'>{project.description}</p>
+              <p className='text-white font-semibold'>{project.description}</p>
               <p className='text-white'>{project.frontend}</p>
               <p className='text-white'>{project.backend}</p>
               <div className='card-actions justify-between mt-5'>

@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section id='contact'>
+    <section id='contact' className='mb-10'>
       <div>
         <div className='text-center py-6'>
           <h2 className={styles.heading2}>Contact</h2>
