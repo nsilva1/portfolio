@@ -11,19 +11,17 @@ const About = () => {
         </div>
         <div>
           <p className={`${styles.paragraph} py-1`}>
-            I am an experienced Software Engineer with over 5 years of
-            experience in React, TypeScript, FastAPI, MongoDB, and PostgreSQL. I
-            specialize in building visually appealing user interfaces using
-            React and TypeScript, while leveraging FastAPI for efficient
-            server-side development. With deep knowledge of MongoDB and
-            PostgreSQL, I excel in designing and optimizing database schemas for
-            superior performance.
+            I am an experienced Software Engineer with over 6 years of
+            experience in Frontend and Backend web development. I specialize in
+            building visually appealing user interfaces using React and
+            TypeScript, while leveraging FastAPI for efficient server-side
+            development. With deep knowledge of MongoDB and PostgreSQL.
           </p>
           <p className={`${styles.paragraph} py-1`}>
             With a strong foundation in both front-end and back-end
             technologies, I have worked on numerous projects involving the
             development of RESTful APIs, database modeling, and user interface
-            design.
+            development
           </p>
           <p className={`${styles.paragraph} py-1`}>
             I stay up to date with the latest trends and technologies in the

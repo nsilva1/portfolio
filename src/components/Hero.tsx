@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import profileImage from '../assets/profile_image.jpg';
 import styles from '../styles';
 import Button from './Button';
@@ -26,9 +26,16 @@ const Hero = () => {
           <span className='text-gradient'>Engineer</span>{' '}
         </h1>
         <p className={`${styles.paragraph} mb-5`}>
-          Self-taught software engineer with over 5 years of experience designing
-          and building web applications. Highly skilled in React, and
-          Python, with experience in DevOps.
+          Self-taught Software Engineer with over 6 years of hands-on experience
+          in designing and implementing robust web applications using React and
+          Python. Proficient in both front-end and back-end development, with a
+          deep understanding of modern web development practices and
+          methodologies. Extensive experience in leveraging various frameworks
+          to deliver scalable and efficient solutions. Additionally, adept in
+          DevOps practices, ensuring seamless integration and deployment
+          processes. Committed to staying updated with emerging technologies and
+          continuously enhancing skills to drive innovation and deliver
+          high-quality products.
         </p>
         <Link to='projects' smooth duration={200}>
           <Button text='Projects' />

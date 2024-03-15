@@ -1,7 +1,7 @@
 import gata from '../assets/gata.png'
 import webChatApp from '../assets/web-chat-app.png'
 import imageGallery from '../assets/image-gallery.png'
-import modern from '../assets/modern.png'
+// import modern from '../assets/modern.png'
 import calculator from '../assets/calculator.png'
 import html from '../assets/html-1.svg'
 import css from '../assets/css-3.svg'
