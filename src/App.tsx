@@ -3,6 +3,7 @@ import { Header } from "./components/Header"
 import { Hero } from './components/Hero'
 import { Features } from './components/Features'
 import { About } from "./components/About"
+import { Skills } from "./components/Skills"
 
 const App = () => {
 
@@ -24,6 +25,9 @@ const App = () => {
 
       {/* About Section */}
       <About />
+
+      {/* Skills Section */}
+      <Skills />
     </div>
   )
 }

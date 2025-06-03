@@ -1,5 +1,56 @@
 import { IHeaderMenuItem } from "./interfaces"
 import { Brush, Code2Icon, CloudLightning, Smartphone } from "lucide-react"
+import html5 from '../assets/icons/html5.svg'
+import css3 from '../assets/icons/css3.svg'
+import javascript from '../assets/icons/javascript.svg'
+import typescript from '../assets/icons/typescript.svg'
+import react from '../assets/icons/react.png'
+import nextjs from '../assets/icons/nextjs.svg'
+import tailwindcss from '../assets/icons/tailwindcss.svg'
+import git from '../assets/icons/git.svg'
+
+export const skills = [
+    {
+        name: 'HTML5',
+        icon: html5,
+        color: 'red'
+    },
+    {
+        name: 'CSS3',
+        icon: css3,
+        color: 'blue'
+    },
+    {
+        name: 'JavaScript',
+        icon: javascript,
+        color: 'yellow'
+    },
+    {
+        name: 'TypeScript',
+        icon: typescript,
+        color: 'blue'
+    },
+    {
+        name: 'React',
+        icon: react,
+        color: 'cyan'
+    },
+    {
+        name: 'Next.js',
+        icon: nextjs,
+        color: 'gray'
+    },
+    {
+        name: 'Tailwind CSS',
+        icon: tailwindcss,
+        color: 'indigo'
+    },
+    {
+        name: 'Git',
+        icon: git,
+        color: 'orange'
+    }
+]
 
 export const headerMenuItems: IHeaderMenuItem[] = [
     {

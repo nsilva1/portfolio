@@ -1,4 +1,4 @@
-import photo from '../../public/images/about-me.jpg'
+import photo from '/images/about-me.jpg'
 
 const About = () => {
   return (
