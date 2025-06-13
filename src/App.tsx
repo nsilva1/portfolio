@@ -5,6 +5,9 @@ import { Features } from './components/Features'
 import { About } from "./components/About"
 import { Skills } from "./components/Skills"
 import { Projects } from "./components/Projects"
+import { Contact } from "./components/Contact"
+import { Footer } from "./components/Footer"
+import { ArrowBigUpDash } from "lucide-react"
 
 const App = () => {
 
@@ -32,6 +35,20 @@ const App = () => {
 
       {/* Projects Section */}
       <Projects />
+
+      {/* Contact Section */}
+      <Contact />
+
+      {/* Footer Section */}
+      <Footer />
+      {/* Scroll to top button */}
+      <button
+        className="fixed bottom-4 right-4 cursor-pointer bg-primary text-white rounded-full p-3 shadow-lg hover:bg-primary/90 transition-colors duration-300"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <ArrowBigUpDash className="w-6 h-6" />
+        <span className="sr-only">Scroll to top</span>
+      </button>
     </div>
   )
 }

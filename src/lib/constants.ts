@@ -8,6 +8,8 @@ import react from '../assets/icons/react.png'
 import nextjs from '../assets/icons/nextjs.svg'
 import tailwindcss from '../assets/icons/tailwindcss.svg'
 import git from '../assets/icons/git.svg'
+import linkedin from '../assets/icons/linkedin.svg'
+import github from '../assets/icons/github.svg'
 
 export const skills = [
     {
@@ -91,5 +93,18 @@ export const features = [
         icon: Smartphone,
         title: 'Responsive Development',
         description: 'Building applications that work seamlessly across all devices, from desktops to mobile phones, ensuring accessibility and usability for all users'
+    }
+]
+
+export const socialLinks = [
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/neto-ukpong-4752992ba/',
+        icon: linkedin
+    },
+    {
+        name: 'GitHub',
+        url: 'https://github.com/nsilva1',
+        icon: github
     }
 ]
