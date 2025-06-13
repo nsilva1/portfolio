@@ -1,46 +1,80 @@
-import { headerMenuItems } from "../lib/constants"
-import { Sun, Moon } from "lucide-react"
+import { useState } from 'react';
+import { headerMenuItems } from '../lib/constants';
+import { Sun, Moon, XIcon, Menu } from 'lucide-react';
+import { getCurrentHour, getGreeting } from '../lib/helperFunctions';
 
-const Header = () => {
-    
+const Header = ({ goToSection }: { goToSection: (sectionId: string) => void }) => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const currentHour = getCurrentHour();
+  const greeting = getGreeting();
+
   return (
     <div className='fixed w-full top-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm shadow-sm transition-all duration-300'>
-        <div className='container mx-auto px-4'>
-            <nav className="flex justify-between items-center py-4">
-                <div className="flex items-center">
-                    <span className="text-xl font-extrabold">Neto</span>
-                    <span className="text-primary text-2xl ml-1">.</span>
-                </div>
-                <ul className="md:flex space-x-8 hidden">
-                    {
-                        headerMenuItems.map((menuItem, index) => (
-                            <li key={index}>
-                                <a href={`#${menuItem.link}`} className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
-                                    {menuItem.label}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
-                <div className="flex items-center space-x-4">
-                    <button className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors hidden dark:block">
-                        <Sun className="w-5 h-5 text-yellow-500" />
-                    </button>
-                    <button className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors dark:hidden">
-                        <Moon className="w-5 h-5 text-blue-500" />
-                    </button>
-                    <button className='p-2 md:hidden' id='menuToggle' aria-label='Toggle Menu' aria-controls='menu' aria-expanded='false'>
-                        <div className='w-6 h-6 flex flex-col justify-between'>
-                            <span className='w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all'></span>
-                            <span className='w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all'></span>
-                            <span className='w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all'></span>
-                        </div>
-                    </button>
-                </div>
-            </nav>
-        </div>
+      <div className='container mx-auto px-4'>
+        <nav className='flex justify-between items-center py-4'>
+          <div className='flex items-center'>
+            <a href='#' className='text-xl font-extrabold'>
+              Neto
+            </a>
+            <span className='text-primary text-2xl ml-1'>.</span>
+          </div>
+          <ul className='md:flex space-x-8 hidden'>
+            {headerMenuItems.map((menuItem, index) => (
+              <li key={index} onClick={() => goToSection(menuItem.link)}>
+                <a
+                  href={`#${menuItem.link}`}
+                  className='text-gray-700 dark:text-gray-300 hover:text-primary transition-colors'
+                >
+                  {menuItem.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className='flex items-center space-x-4'>
+            <div className='hidden md:flex gap-2 text-gray-700 dark:text-gray-300'>
+              <span className='font-semibold text-xl'>{greeting}</span>
+              <span className=''>
+                {currentHour < 18 ? (
+                  <Sun className='text-2xl text-yellow-500' />
+                ) : (
+                  <Moon className='text-2xl text-blue-500' />
+                )}
+              </span>
+            </div>
+          </div>
+          {/* Mobile Menu */}
+          <div className='md:hidden'>
+            <div
+              className='p-2 cursor-pointer'
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+              aria-label='Toggle Mobile Menu'
+            >
+              {showMobileMenu ? <XIcon /> : <Menu />}
+            </div>
+            <div
+              className={`${
+                showMobileMenu ? 'flex' : 'hidden'
+              } p-6 bg-white text-black absolute top-16 right-0 mx-4 my-2 min-w-[150px] rounded-xl z-10`}
+            >
+              <ul className='list-none flex flex-col gap-8 justify-end items-center flex-1'>
+                {headerMenuItems.map((menuItem, index) => (
+                  <li key={index}>
+                    <a
+                      href={`#${menuItem.link}`}
+                      className='text-gray-700 dark:text-gray-300 hover:text-primary transition-colors'
+                    >
+                      {menuItem.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export { Header }
+export { Header };

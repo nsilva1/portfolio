@@ -9,15 +9,11 @@ const ProjectList = () => {
   const fetchProjects = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        'https://api.github.com/users/nsilva1/repos'
-      );
+      const response = await fetch('https://api.github.com/users/nsilva1/repos');
       const data: IGithubRepository[] = await response.json();
       // Filter out repositories that don't have a homepage
       const filteredData = data.filter((repo) => {
-        return (
-          repo.homepage && repo.name !== 'portfolio' && repo.name !== 'nsilva1'
-        );
+        return repo.homepage && repo.name !== 'portfolio' && repo.name !== 'nsilva1';
       });
       setProjects(filteredData);
     } catch (error) {
@@ -36,9 +32,7 @@ const ProjectList = () => {
       {loading ? (
         <Loader />
       ) : projects.length === 0 ? (
-        <div className='text-center text-gray-500 dark:text-gray-400'>
-          No projects found.
-        </div>
+        <div className='text-center text-gray-500 dark:text-gray-400'>No projects found.</div>
       ) : (
         <div className='mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {projects.map((project) => (
