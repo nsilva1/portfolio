@@ -8,6 +8,8 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ArrowBigUpDash } from 'lucide-react';
 
+import { ToastContainer } from 'react-toastify';
+
 const App = () => {
   const goToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -18,6 +20,7 @@ const App = () => {
 
   return (
     <div>
+      <ToastContainer />
       {/* Dark mode background gradient */}
       <div className='fixed inset-0 -z-10 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none'>
         <div className='absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10'></div>
