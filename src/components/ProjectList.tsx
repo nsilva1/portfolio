@@ -5,6 +5,14 @@ import { Loader } from './Loader';
 const ProjectList = () => {
   const [projects, setProjects] = useState<IGithubRepository[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [projectNumber, setProjectNumber] = useState<number>(3);
+
+  const handleViewMore = () => {
+    setProjectNumber((prev) => prev + 3);
+    if (projectNumber >= projects.length) {
+      setProjectNumber(projects.length); // Prevent exceeding the number of projects
+    }
+  }
 
   const fetchProjects = useCallback(async () => {
     setLoading(true);
@@ -13,7 +21,7 @@ const ProjectList = () => {
       const data: IGithubRepository[] = await response.json();
       // Filter out repositories that don't have a homepage
       const filteredData = data.filter((repo) => {
-        return repo.homepage && repo.name !== 'portfolio' && repo.name !== 'nsilva1';
+        return repo.homepage && repo.name !== 'portfolio' && repo.name !== 'nsilva1' && repo.name !== 'mainstack-test' && repo.name !== 'oju-clinic' && repo.name !== 'iissn' && repo.name !== 'security-audit' && repo.name !== 'simple-calculator';
       });
       setProjects(filteredData);
     } catch (error) {
@@ -35,7 +43,7 @@ const ProjectList = () => {
         <div className='text-center text-gray-500 dark:text-gray-400'>No projects found.</div>
       ) : (
         <div className='mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {projects.map((project) => (
+          {projects.slice(0, projectNumber).map((project) => (
             <div
               key={project.id}
               className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 cursor-pointer'
@@ -51,7 +59,7 @@ const ProjectList = () => {
                   rel='noopener noreferrer'
                   className='text-blue-500 hover:underline flex items-center gap-2'
                 >
-                  <span>View Live Project</span>
+                  <span>View Live Preview</span>
                 </a>
                 <a
                   href={project.html_url}
@@ -62,10 +70,24 @@ const ProjectList = () => {
                   <span>View Repository</span>
                 </a>
               </div>
+              <div className='flex items-center mt-4 gap-4'>
+                {
+                  project.topics.map((topic, index) => (
+                    <span key={index} className='text-gray-600 dark:text-gray-400 p-1 rounded-md text-sm'>
+                      {topic}
+                    </span>
+                  ))
+                }
+              </div>
             </div>
           ))}
         </div>
       )}
+      <div className='flex justify-end'>
+        <button onClick={handleViewMore} className='mt-6 bg-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow hover:bg-blue-600 transition duration-200 cursor-pointer'>
+          View More
+        </button>
+      </div>
     </div>
   );
 };
